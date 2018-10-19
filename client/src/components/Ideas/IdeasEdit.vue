@@ -122,7 +122,8 @@ export default {
         details:this.addImg(this.$refs.ue2.getContent()),
         checkT:this.oks
       };
-
+// console.log(newPost)
+// return false
 
       this.$axios
         .post("/api/ideas/edit/"+this.getUrl('id'), newPost)

@@ -48,8 +48,8 @@ export default {
   data() {
     return {
       title: "",
-      defaultDes: '1',
-      defaultMsg: '2',
+      defaultDes: '',
+      defaultMsg: '',
       ue1: "ue1", // 不同编辑器必须不同的id
       ue2: "ue2",
       config1: {
@@ -92,8 +92,8 @@ export default {
       const user = this.$store.getters.user;
       const newPost = {
         title: this.title,
-        description:this.$refs.ue1.getContent(),
-        details:this.$refs.ue2.getContent(),
+        description:this.addDesc(this.$refs.ue1.getContent()),
+        details:this.addImg(this.$refs.ue2.getContent()),
         name: user.name,
         checkT:this.oks
         // avater: user.avater
